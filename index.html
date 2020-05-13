@@ -1,0 +1,148 @@
+<!Doctype HTML>
+<html>
+    <head>
+    <meta charset="utf-8">
+        <title>FinIT</title>
+     <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    </head>
+    <body>
+ <header>
+     <div class="topnav" id="myTopnav">
+                     <a href="#part1">Home</a>
+                     <a href="#part2">Services</a>
+                     <a href="#part3">Contact</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+
+        <i class="fa fa-bars"></i>
+      </a>
+     </div>
+</header>
+<div id="part1">
+    <div>
+      <h1 class="ml15"><span class="word">Fin</span><span class="word">IT</span></h1>
+    </div>
+   <div id="background1">
+          <img class="mySlides fade" src="css/images/build.jpg" >
+          <img class="mySlides fade" src="css/images/build3.jpg" >
+          <img class="mySlides fade" src="css/images/build4.jpg">
+          <img class="mySlides fade" src="css/images/PANO.jpg" >
+        <div id="intro1">
+        <p> <br>&nbsp;&nbsp;Welcome to FinIT, an innovative 2019 startup providing finance, internal audit and IT consultancy.<br></p>
+  
+  </div>
+      </div>
+</div>
+      <div id="part2">
+        <h1>Services</h1>
+          <div id="background2">
+           <ol id="finance">
+            <h3>Finance and Audit<br></h3><br>
+  <li>Internal controls: analysis of the main risks and proposal of internal controls necessary to mitigate the risk of losses</li>
+  <li>Drafting and implementation of internal procedures</li>
+  <li>Internal audit services - targeted engagements or/and consultancy for the set up of the internal audit function</li>
+  <li>Special Investigations: fraud and corruption investigations, data analysis and reporting</li>
+  <li>Review and agreed upon procedures engagements</li>
+  <li>Personalised trainings for complex, specific or general IFRS understanding</li>
+  <li>Review of financial statements for projects financed from public funds</li>
+  <li>Finance aspects explained to non-finance professionals</li>
+  <li>Other consultancy services.</li><br>
+           </ol>
+           <ol id="IT">
+          <h3>IT - Web development<br></h3> <br>
+  <li>Professional websites</li>
+  <li>Search Engine Optimisation</li>
+  <li>Website Design & Re-design</li>
+  <li>Contact forms</li>
+  <li>Social media links</li>
+  <li>eCommerce & Online Shops</li>
+  <li>Professional photos</li>
+  <li>Mobile devices friendly</li>
+  <li>Cloud Hosting & Domain Services</li>
+  <li>Support & Help</li>
+     </ol>
+    </div>
+    </div>
+          </div>
+        <div id="part3">
+            <h1>Contact us </h1>
+          <div id="background3"> 
+          <p>&nbsp;&nbsp;FinIT Ltd was set up in 2019 as a company providing finance, audit and IT consultancy.
+            <br>&nbsp;&nbsp;Our assets:
+            a team of professionals with extensive knowledge and experience.
+            <br>&nbsp;&nbsp;Tailored services.<br>
+            &nbsp;&nbsp;Fair price for quality services.<br>
+            &nbsp;&nbsp;Flexibility in meeting the client needs.<br></p>
+            <div class="form-style" id="contact_form">
+            <div id="contact_results"></div>
+            <div id="app">
+            <div id="contact_body">
+              <label><span>Name <span class="required">*</span></span>
+                <input type="text" name="name" id="name" required="true" class="input-field" v-model="message1" />
+              </label>
+              <label><span>Email <span class="required">*</span></span>
+                <input type="email" name="email" required="true" class="input-field" v-model="message2" />
+              </label>
+              <label><span>Phone</span>
+                <input type="text" placeholder="+40" name="phone2" maxlength="15" required="false"
+                  class="tel-number-field long" />
+              </label>
+              <label for="subject"><span>Regarding</span>
+                <select name="subject" class="select-field" v-model="message3">
+                  <option value="General Question">General Question</option>
+                  <option value="Advertise">Advertisement</option>
+                  <option value="Partnership">Partnership Opportunity</option>
+                </select>
+              </label>
+              <label for="field5"><span>Message <span class="required">*</span></span>
+                <textarea name="message" id="message" class="textarea-field" required="true" v-model="message4"></textarea>
+              </label>
+              <label>
+                <span>&nbsp;</span><input type="submit" id="submit_btn" value="Submit" />
+              </label>
+            </div>
+            <span id="letter">
+              <h3>Preview of your email!</h3>
+              <br><br>{{ message1 }}
+              <br><br> {{ message2 }}
+              <br><br> {{ message3 }}
+              <br><br> {{message4}}<br>
+            </span>
+            </div>
+          </div>
+        </div>
+        </div>
+      <div class="topnav-footer">
+        
+            <a href="#part1">Home</a>
+            <a href="#part2">Services</a>
+            <a href="#part3">Contact</a>
+      
+   </div>
+        <footer class="footer">
+          <a href="#part1" id="return-to-top"><i class="fa fa-arrow-circle-up"></i></a>
+                <p id="company"> Copyright &copy; 2019 Finit LTD.<br> All rights reserved. <br>Website by: FinIT LTD<br></p>
+            <img class="footer-image" src="css/images/Logo.jpg">
+        </footer>
+       <script>
+        myObject1 = new Vue({
+          el: '#app',
+          data: {
+            message1: '',
+            message2: '',
+            message3: '',
+            message4: '',
+
+          }
+        })
+        </script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+      <script src="app.js"></script>
+    </body>
+</html>
